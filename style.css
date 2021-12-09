@@ -10,7 +10,6 @@ body{
 
 nav{
     font-family: 'Ubuntu', sans-serif;
-    
 }
 
 nav ul{
@@ -94,6 +93,7 @@ nav ul li{
 
 .songitem img{
     width: 43px;
+    height: 43px;
     margin: 0 20px;
     border-radius: 25px;
 }
