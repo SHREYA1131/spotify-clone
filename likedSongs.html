@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:;base64,="> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo3.svg" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li ><a href="/Liked Songs">Liked Songs</a></li>
+            <li ><a href="/page3">My Playlists</a></li>
+            <li>account</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <h1>Liked Songs</h1>
+            <br>
+            <div class="songitem">
+                <img class="coverimg" src="cover/1.jpg">
+                <span class="songname">tere liye</span>
+                <div class="temp">
+                    <span class="songlistplay"><span class="timestamp"><i class="fas songitemplay fa-play-circle" id="1"></i> 05:10</span> </span>
+                    <div class="dropdown-container" tabindex="-1">
+                    <div class="three-dots"></div>
+                    <div class="dropdown">
+                      <div class="list">
+                        <div class="dropdownPlaylist">
+                          <button class="dropbtn">Add to Liked songs</button>
+                        </div>
+                        <div class="dropdownPlaylist">
+                          <button class="dropbtn">Add to My Playlist</button>
+                          <div class="dropdownPlaylist-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div></div>
+                
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <p class="bottom-space">.</p>
+
+    <div class="bottom">
+        <div class="currentSong">
+            <img class="bottomCoverimg" src="cover/default currentSong image.jpg">
+            <div style="display:flex; flex-direction: row; justify-content: space-between; width:80%; ">
+                <span class="bottomSongname" style="margin-top: 4px;">No song playing</span>
+            <div class="dropdown-container" tabindex="-1">
+                <div class="three-dots" ></div>
+
+                <div class="dropdown">
+                    <div class="list">
+                      <div class="dropdownPlaylist">
+                        <button class="dropbtn">Add to Liked songs</button>
+                      </div>
+                      <div class="dropdownPlaylist">
+                        <button class="dropbtn">Add to My Playlist</button>
+                        <div class="dropdownPlaylist-content">
+                          <a href="#">Link 1</a>
+                          <a href="#">Link 2</a>
+                          <a href="#">Link 3</a>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="range">
+            <input type="range" name="range" id="myprogressbar" value="0" min="0" max="100">
+            <div class="icons"> 
+                <!--fontawesome icons-->
+                <i class="fas fa-3x fa-step-backward"></i>
+                <i class="fas fa-3x fa-play-circle" id="masterPlay"></i>
+                <i class="fas fa-3x fa-step-forward"></i>
+            </div>
+        </div>
+        <!-- <div class="songinfo">
+            <img src="audio.gif" width="42px" id="gif" alt="" >tere liye - veer zara
+        </div> -->
+    </div>
+    <script src="https://kit.fontawesome.com/0613e14fa8.js" crossorigin="anonymous"></script>
+    <script src="scriptLiked.js"></script>
+    
+</body>
+</html>

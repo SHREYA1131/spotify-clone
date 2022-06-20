@@ -18,15 +18,31 @@ let songs = [
     {songname: "Latoo - Ghajini", filePath: "songs/7Latoo.mp3", coverPath: "cover/7.jpg"},
     {songname: "Kaise Mujhe - Ghajini", filePath: "songs/8KaiseMujhe.mp3", coverPath: "cover/8.jpg"},
     {songname: "Chup Chup Ke - Rush", filePath: "songs/9ChupChupKe.mp3", coverPath: "cover/9.jpg"},
-    {songname: "Baarish Ka Asar - Twin Strings", filePath: "songs/10BaarishKaAsar.mp3", coverPath: "cover/10.jpg"},
+    {songname: "Baarish Ka Asar - Twin Strings", filePath: "songs/10BaarishKaAsar.mp3", coverPath: "cover/10.jpg"}
 ]
 //audioElement.play();
 
 songitems.forEach((element, i)=>{
-    console.log(element, i);
+    //console.log(element, i);
     element.getElementsByClassName("coverimg")[0].src = songs[i].coverPath;
     element.getElementsByClassName("songname")[0].innerText = songs[i].songname;
+    //console.log(typeof element);
 })
+/*
+let div = document.querySelector('.container');
+songs.forEach((element, i)=>{
+    let newDiv = document.createElement("div")
+    newDiv.class = "songitem";
+    div.appendChild(newDiv);
+
+})
+
+<div class="songitem">
+    <img class="coverimg" alt="1">
+    <span class="songname"> tere liye </span>
+    <span class="songlistplay"><spaclass="timestamp"> <iclass="fas songitemplafa-play-circle"></i> 05:10 </span><span>
+</div>
+*/
 
 //play/pause
 masterPlay.addEventListener('click', ()=>{
@@ -55,3 +71,22 @@ audioElement.addEventListener('timeupdate', ()=>{
 myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
 })
+
+const makeallplays = ()=>{
+    Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
+        element.classList.add('fa-play-circle');
+        element.classList.remove('fa-pause-circle');
+    })
+
+}
+
+Array.from(document.getElementsByClassName('songitemplay')).forEach((element)=>{
+    element.addEventListener('click', (e)=>{
+        console.log(e.target);
+        makeallplays();
+        e.target.classList.remove('fa-play-circle');
+        e.target.classList.add('fa-pause-circle'); 
+    })
+})
+
+

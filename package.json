@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "name": "audio_project",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHREYA1131/spotify-clone.git"
+  },
+  "author": "Shreya Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SHREYA1131/spotify-clone/issues"
+  },
+  "homepage": "https://github.com/SHREYA1131/spotify-clone#readme",
+  "description": ""
+}

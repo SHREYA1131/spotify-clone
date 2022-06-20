@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify</title>
+    <link rel="stylesheet" href="styleMyplaylists.css">
+    <link rel="icon" href="data:;base64,="> 
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo3.svg" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li ><a href="/Liked Songs">Liked Songs</a></li>
+            <li ><a href="/page3">My Playlists</a></li>
+            <li>account</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="tab">
+            <h3 class="myPlaylists">My Playlists</h3>
+
+            <button class="tablinks" onclick="openPlaylist(event, 'sufi')" id="defaultOpen"> Create New Playlist </button>
+
+        </div>
+          
+          
+        <div id="sufi" class="tabcontent">
+          <h3 class="selectedList">Create New Playlist</h3>
+        </div>     
+
+         
+    </div>
+
+
+    <p class="bottom-space"> .</p>
+
+    <div class="bottom">
+        <div class="currentSong">
+            <img class="bottomCoverimg" src="cover/default currentSong image.jpg">
+            <span class="bottomSongname">No song playing</span>
+        </div>
+        <div class="range">
+            <input type="range" name="range" id="myprogressbar" value="0" min="0" max="100">
+            <div class="icons"> 
+                <!--fontawesome icons-->
+                <i class="fas fa-3x fa-step-backward"></i>
+                <i class="fas fa-3x fa-play-circle" id="masterPlay"></i>
+                <i class="fas fa-3x fa-step-forward"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/0613e14fa8.js" crossorigin="anonymous"></script>
+    <script src="scriptMyplaylists.js"></script>
+    
+</body>
+</html>

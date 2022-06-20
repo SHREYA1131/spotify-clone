@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Ubuntu&family=Varela+Round&display=swap');
+body{
+    background-color: rgb(62, 65, 68);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    height: 70px;
+    background-color: black;
+    color: white;
+  }
+  
+  
+  nav ul li{
+    padding: 0 12px;
+  }   
+  
+  .right {
+    float:right;
+    padding: 0 12px;
+    color: white;
+}
+    
+.brand img{
+    width: 60px;
+    padding: 0 5px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.2rem; 
+}
+
+.container{
+    display: flex;
+    min-height: 61vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    width: 80%;
+    margin: 20px auto;
+    padding: 34px;
+    border-radius: 10px;
+    background-image: url('bg1.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bottom-space{
+  margin-top: 50px;
+  margin-bottom: 95px;
+}
+
+.bottom{
+    position:fixed;
+    width: 100%;
+    display: flex;
+    height: 110px;
+    background-color: black;
+    color:white;
+    bottom: 0px;
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.icons{
+    margin-top: 14px;
+}
+.icons i{
+    cursor: pointer;
+}
+
+#myprogressbar{
+    width: 50vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.songitem{
+    display: flex;
+    height: 45px;
+    background-color: rgba(250, 247, 247, 0.849);
+    color: #000000;
+    margin: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.songitem img{
+    width: 43px;
+    height: 43px;
+    margin: 0 20px;
+    border-radius: 25px;
+}
+
+.songlistplay{
+  display: flex;
+  margin: 0px;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.temp{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.timestamp{
+    margin: 0 15px;
+}
+
+.timestanp i{
+    cursor: pointer;
+}
+
+.songinfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif; 
+}
+
+.songinfo img{
+    opacity:0;
+    transition: opacity 0.3s ease-in;
+}
+
+.currentSong{
+    float:left;
+    display :flex;
+    height: 52px;
+    width: 23%;
+    background-color: rgb(62, 65, 68);
+    color: #ffffff;
+    margin: 30px 5px;
+    align-items: center;
+}
+
+.bottomCoverimg{
+  width: 52px;
+  height: 52px;
+  margin: 0 15px;
+}
+
+.range{
+  /*float:right;*/
+  float:left;
+  display: flex;
+  width:55%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* dotted drop down menu*/
+.three-dots:after {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  content: '\2807';
+  font-size: 20px;
+  padding: 0 0;
+  margin: 0 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a div {
+  padding: 2px;
+}
+
+.dropdown {
+  display : inline-block;
+  position: absolute;
+  background-color: #66D;
+  box-shadow: 0px 0px 3px 3px #66D;
+  outline: none;
+  opacity: 0;
+  z-index: -1;
+  max-height: 0;
+  transition: opacity 0.1s, z-index 0.1s, max-height 5s;
+}
+
+.dropdown-container:focus {
+  outline: none;
+}
+
+.dropdown-container:focus .dropdown {
+  opacity: 1;
+  z-index: 100;
+  max-height: 100vh;
+  transition: opacity 0.2s, z-index 0.2s, max-height 0.2s;
+}
+
+
+
+.main-container {
+    padding: 20px;
+  }
+  
+  /* HEADING */
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .heading__title {
+    font-weight: 600;
+  }
+  
+  .heading__credits {
+    margin: 10px 0px;
+    color: #888888;
+    font-size: 25px;
+    transition: all 0.5s;
+  }
+  
+  .heading__link {
+    text-decoration: none;
+  }
+  
+  .heading__credits .heading__link {
+    color: inherit;
+  }
+  
+  /* CARDS */
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .card__link,
+  .card__exit,
+  .card__icon {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+  }
+  
+  .card__link:hover::after {
+    width: 100%;
+  }
+  
+  .card__exit {
+    grid-row: 1/2;
+    justify-self: end;
+  }
+  
+  .card__icon {
+    grid-row: 2/3;
+    font-size: 30px;
+  }
+  
+  .card__title {
+    grid-row: 3/4;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .card__apply {
+    grid-row: 3/4;
+    font-weight: 400;
+    color :black;
+    /*align-self: center;*/
+  }
+  
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background: radial-gradient(#1fe4f5, #3fbafe);
+  }
+  
+  .card-2 {
+    background: radial-gradient(#fbc1cc, #fa99b2);
+  }
+  
+  .card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+  .card-4 {
+    background: radial-gradient(#60efbc, #58d5c9);
+  }
+  
+  .card-5 {
+    background: radial-gradient(#f588d8, #c0a3e5);
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1600px) {
+    .cards {
+      justify-content: center;
+    }
+  }
+  
